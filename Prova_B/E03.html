@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
     //Problema: Somar os números ímpares de 1 até N
     /*
@@ -6,11 +7,26 @@
     //AQUI, USE FOR COM VARIÁVEL DE CONTROLE!!!
 
     //Entrada
-
+    const numeroN = Number(prompt("Informe um número N:"));
 
     //Processamento
+    let pares = [];
+    let impares = [];
+    let soma = 0;
 
+    for (let contador = 0; contador < numeroN; contador++) {
+        if (contador % 2 === 0) {
+            pares.push(contador);
+        } else {
+            impares.push(contador);
+        }
+    }
 
+    for (let sum = 0; sum < impares.length; sum++) {
+        soma += impares[sum];
+    }
+    
     //Saída
+    document.write(`Soma dos números ímpares de 1 até ${numeroN}: ${soma}`);
 
 </script>

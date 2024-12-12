@@ -8,11 +8,17 @@
     //AQUI, USE QUALQUER ESTRUTURA DE REPEETIÇÃO QUE DESEJAR!
 
     //Entrada
-
+    let lista = ['arara', 'para', 'radar', 'tomate', 'osso', 'ana', 'casa', 'ovo'];
+    let palindromos = [];
 
     //Processamento
-
+    for (let item of lista) {
+        if (item[0] === item[4] || item[0] === item [3] || item[0] === item[2]) {
+            palindromos.push(item);
+        }
+    }
 
     //Saída
+    document.write(`Palíndromos: ${palindromos}`);
 
 </script>

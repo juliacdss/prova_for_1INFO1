@@ -7,11 +7,17 @@
     //AQUI, USE FOR...OF!
     
     //Entrada
-
+    let lista = ['Arara', 'Para', 'Radar', 'Tomate', 'Osso', 'Ana', 'Casa', 'Ovo'];
+    let maisLetras = [];
 
     //Processamento
-
+    for (let item of lista) {
+        if (item.includes(item[4])) {
+            maisLetras.push(item);
+        }
+    }
 
     //Saída
+    document.write( maisLetras.length + " palavras possuem mais de 4 letras.");
 
 </script>

@@ -7,11 +7,26 @@
     //AQUI, USE FOR...OF!
     
     //Entrada
-
+    let listaNumeros = [10, 3, 5, 7, 9, 2, 11];
+    let maior = [];
+    let menor = [];
 
     //Processamento
+    for (let item of listaNumeros) {
+        listaNumeros.sort((a,b) => b-a)
+        maior.push(item);
+    }
+    for (let item of listaNumeros) {
+        listaNumeros.sort((a,b) => a-b)
+        menor.push(item);
+    }
 
+    maior = listaNumeros[6];
+    menor = listaNumeros[0];
 
     //Saída
+    document.write(`Maior número: ${maior}<br>`);
+    document.write(`Menor número: ${menor}`);
+
 
 </script>

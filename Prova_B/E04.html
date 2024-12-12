@@ -10,10 +10,23 @@
     //AQUI, USE FOR COM VARIÁVEL DE CONTROLE!!!
 
     //Entrada
-
+    const numInicial = Number(prompt("Informe um número inteiro positivo inicial:"));
+    const numFinal = Number(prompt("Informe um número inteiro positivo final:"));
+    let divisores1 = [];
+    let divisores2 = [];
 
     //Processamento
+    for (let contador = numInicial; contador <= numFinal; contador++) {
+        if (contador % 1 === 0) {
+            divisores1.push(contador);
+            
+            if (divisores1.length === 2) {
+                divisores2.push(contador);
+                document.write(`Números primos entre ${numInicial} e ${numFinal}: ${divisores2}`);
+            }
+        }
 
+    }
 
     //Saída
 
