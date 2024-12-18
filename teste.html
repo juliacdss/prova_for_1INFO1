@@ -1,0 +1,34 @@
+<script>
+    
+    // NÚMEROS PRIMOS ENTRE
+
+    // Entrada: Recebe os números iniciais e finais do usuário
+    const numInicial = Number(prompt("Informe um número inteiro positivo inicial:"));
+    const numFinal = Number(prompt("Informe um número inteiro positivo final:"));
+
+    // Processamento: Encontra os números primos no intervalo
+    let numerosPrimos = [];
+    for (let contador = numInicial; contador <= numFinal; contador++) {
+        let ehPrimo = true;
+
+        // Verifica se o número é primo
+        if (contador < 2) {
+            ehPrimo = false; // Números menores que 2 não são primos
+        } else {
+            for (let divisor = 2; divisor <= Math.sqrt(contador); divisor++) {
+                if (contador % divisor === 0) {
+                    ehPrimo = false; // Não é primo se for divisível por outro número
+                    break; // Sai do laço se encontrou um divisor
+                }
+            }
+        }
+
+        // Se for primo, adiciona à lista
+        if (ehPrimo) {
+            numerosPrimos.push(contador);
+        }
+    }
+
+    // Saída: Exibe os números primos encontrados
+    document.write(`Números primos entre ${numInicial} e ${numFinal}: ${numerosPrimos.join(", ")}`);
+</script>

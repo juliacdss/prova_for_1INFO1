@@ -1,0 +1,19 @@
+<script>
+    // Entrada
+    let lista = ['arara', 'para', 'radar', 'tomate', 'osso', 'ana', 'casa', 'ovo'];
+    let palindromos = [];
+
+    // Processamento
+    for (let item of lista) {
+        let reverso = '';
+        for (let i = item.length - 1; i >= 0; i--) {
+            reverso += item[i]; // Constrói a palavra ao contrário
+        }
+        if (item === reverso) {
+            palindromos.push(item); // Adiciona à lista de palíndromos se for igual ao reverso
+        }
+    }
+
+    // Saída
+    document.write(`Palíndromos: ${palindromos.join(', ')}`);
+</script>
